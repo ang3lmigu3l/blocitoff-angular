@@ -1,5 +1,6 @@
 (function(){
-    function LandingCtrl(){
+    function LandingCtrl($scope){
+        $scope.myValue = false;
         
     }
     angular

@@ -14,7 +14,7 @@
         
     };
     angular
-        .module('blocItOff', ['ui.router','ui.bootstrap', 'firebase'])
+        .module('blocItOff', ['ui.router','ui.bootstrap', 'firebase', 'ngAnimate'])
         .config(config);
     
 })();

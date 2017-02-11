@@ -1,3 +1,9 @@
+*, *:before, *:after {
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
 }
@@ -11,14 +17,19 @@ body {
     margin: 0 auto;
 }
 #active-tasks{
+    box-shadow: 5px 5px 10px #888888;
+    padding-left: 0px;
+    padding-right:0px;
 
 }
 
 #tasks-header{
     color: #fff;
     background-color:#272e34;
+    height: 40px;
     
 }
+
 
 .header-title{
     text-align: center;
@@ -28,7 +39,22 @@ body {
  
 }
 
+.left-icon {
+    color: #f7f7f7;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-left: 10px;
+    float:left;
+}
 
+.right-icon{
+    color: #f7f7f7;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-right: 10px;
+    float: right;
+
+}
 
 #tasks-list {
     border: 1px solid #272e34;
@@ -36,27 +62,83 @@ body {
 }
 
 .task-item{
-    padding-top:.5rem;
+    height: 40px;
+    padding-left: 5px;
     font-size: 2rem;
     color: #272e34;
     background-color: 	#fff;
     border-bottom: 1px solid #a1a0a0;
     height:4rem;
+    
 }
 
-.left-icon {
-    color: #f7f7f7;
-    font-size: 30px;
-    padding-top: 2px;
-    padding-left: 5px;
-    float:left;
-}
-
-.right-icon{
-    color: #f7f7f7;
-    font-size: 30px;
-    padding-top: 2px;
-    padding-right: 5px;
+/*
+when item buttons are hidden 
+*/
+.item-btn-grp {
+    display:inline-block;
     float: right;
+    border-left: 1px solid #a1a0a0;
+    opacity: 0;
+}
+
+
+/* 
+
+*/
+
+.task-item:hover .item-btn-grp{
+    display:inline-block;
+    float: right;
+    height: 40px;
+    border-left: 1px solid #a1a0a0;
+    opacity: 1;
+}
+
+
+.slide {
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+}
+
+.slide:hover {
+    -webkit-transition: opacity 0.2s ease-in;
+    -moz-transition: opacity 0.2s ease-in;
+    -ms-transition: opacity 0.2s ease-in;
+    -o-transition: opacity 0.2s ease-in;
+	transition: opacity 0.2s ease-in;
+}
+
+
+.item-btn-ok{
+    border: none;
+    color: #fff;
+    height: 39px;
+    width:39px;
+    background-color:#0dd5e5;
+    margin-right: -5px;
+    
+}
+
+button.item-btn-ok:hover{
+    background-color: #c5c5c5;
+}
+
+.item-btn-remove{
+    border: none;
+    color:#fff;
+    height: 39px;
+    width:39px;
+    background-color: #000000; 
+}
+
+button.item-btn-remove:hover{
+    background-color: #c5c5c5;
+}
+
+
 
 
