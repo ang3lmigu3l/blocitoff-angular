@@ -8,18 +8,15 @@
         </div>
     </div>
     <div id="tasks-list">
-    <li class="task-item">
-        Do this And then that
-        <div class='item-btn-grp slide'  >
-            <button class="item-btn-ok"><span class="glyphicon glyphicon-ok"></span></button>
-            <button class="item-btn-remove"><span class="glyphicon glyphicon-remove"></span></button>
+        <div class="input-grp">
+            <input type="text" class="new-task-input" maxlength="30" class="new-msg" ng-model="newTask.title" >
+            <button class="new-task-btn" ng-click="addTask(newTask.title)" type="button"><span class="glyphicon glyphicon-plus"></span></button>
         </div>
-    </li>
-            <li class="task-item">
-        Do this And then that
+    <li class="task-item" ng-repeat="task in tasks | orderBy: 'createdAt':true">
+        {{task.title}}
         <div class='item-btn-grp slide'  >
             <button class="item-btn-ok"><span class="glyphicon glyphicon-ok"></span></button>
-            <button class="item-btn-remove"><span class="glyphicon glyphicon-remove"></span></button>
+            <button class="item-btn-remove" ng-click="removeTask(task)"><span class="glyphicon glyphicon-remove"></span></button>
         </div>
     </li>
 
