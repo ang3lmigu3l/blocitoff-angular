@@ -3,8 +3,14 @@
         var ref = firebase.database().ref().child("tasks");
         var tasks = $firebaseArray(ref);
         
+        var completedTask = function(task){
+            task.completed = true ;
+            tasks.$save(task);
+           
+        }
+        
         var addTask = function(task){
-            task.createdAt = firebase.database.ServerValue.TIMESTAMP;
+            task.createdAt = (new Date()).getDate();
             task.completed = false;
             return tasks.$add(task);
             
@@ -17,6 +23,7 @@
         return{
             all : tasks,
             add : addTask,
+            completed : completedTask,
             remove : removeTask
         };
     }

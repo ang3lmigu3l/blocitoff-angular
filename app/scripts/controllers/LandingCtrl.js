@@ -13,6 +13,10 @@
             Task.remove(task);
         }
         
+        $scope.markComplete = function(task){
+            Task.completed(task);
+        }
+        
     }
     angular
         .module('blocItOff')
