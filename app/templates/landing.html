@@ -9,8 +9,8 @@
     </div>
     <div id="tasks-list">
         <div class="input-grp">
-            <input type="text" class="new-task-input" maxlength="30" class="new-msg" ng-model="newTask.title" >
-            <button class="new-task-btn" ng-click="addTask(newTask.title)" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+            <input type="text" class="new-task-input" maxlength="30" class="new-msg" ng-model="newTask.title" placeholder="Add new task..">
+            <button class="new-task-btn" ng-click="addTask(newTask.title)" type="button"><span id="glyphicon-spin" class="glyphicon glyphicon-plus-sign"></span></button>
         </div>
     <li class="task-item" ng-repeat="task in tasks | orderBy: 'createdAt':true">
         <span class="task-title">{{task.title}}</span>

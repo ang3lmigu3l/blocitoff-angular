@@ -2,29 +2,33 @@
     outline: none;
 }
 body {
+    background: url('../assets/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color:black;
     font-family: 'Quicksand', sans-serif;
+
 }
 
 #logo{
-    background-image: url("/assets/images/blocitoff-logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    height:90px;
-    width: 320px;
-    margin: 0 auto;
+    text-align: center;
+    font-size: 6rem;
+    color: #fff;
 }
+
 #active-tasks{
-    box-shadow: 5px 5px 10px #888888;
+    box-shadow: 5px 5px 40px #888888;
     padding-left: 0px;
     padding-right:0px;
     min-height: 400px;
-    border: 1px solid #272e34;
+    border: 1px solid gray;
+    background-color:#fff;
+    
 
 }
 
 #tasks-header{
     color: #fff;
-    background-color:#272e34;
+    background-color: #495c60;
     height: 40px;
     
 }
@@ -39,7 +43,7 @@ body {
 }
 
 .left-icon {
-    color: #f7f7f7;
+    color: #fff;
     font-size: 25px;
     padding-top: 5px;
     padding-left: 10px;
@@ -47,7 +51,7 @@ body {
 }
 
 .right-icon{
-    color: #f7f7f7;
+    color: #fff;
     font-size: 25px;
     padding-top: 5px;
     padding-right: 10px;
@@ -60,17 +64,19 @@ body {
 }
 
 .task-item{
-    height: 40px;
+    height: 35px;
     padding-left: 5px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #272e34;
-    background-color: 	#fff;
+    background-color:#fff;
     border-bottom: 1px solid #a1a0a0;
-    height:4rem;
+
     
 }
 
 .task-title{
+    color: #495c60;
+    vertical-align: middle;
 
 }
 
@@ -93,7 +99,7 @@ when item buttons are hidden
 .task-item:hover .item-btn-grp{
     display:inline-block;
     float: right;
-    height: 40px;
+    height: 35px;
     border-left: 1px solid #a1a0a0;
     opacity: 1;
 }
@@ -118,28 +124,28 @@ when item buttons are hidden
 
 .item-btn-ok{
     border: none;
-    color: #fff;
-    height: 39px;
-    width:39px;
-    background-color:#09c3ff;
+    color: #6ec5c4;
+    height: 34px;
+    width:34px;
+    background-color:#fff;
     margin-right: -5px;
     
 }
 
 button.item-btn-ok:hover{
-    background-color: #c5c5c5;
+    background-color: #edf9cb;
 }
 
 .item-btn-remove{
     border: none;
-    color:#fff;
-    height: 39px;
-    width:39px;
-    background-color: #272e34; 
+    color:#31919b;
+    height: 34px;
+    width:34px;
+    background-color: #fff; 
 }
 
 button.item-btn-remove:hover{
-    background-color: #c5c5c5;
+    background-color: #edf9cb;
 }
 
 .input-grp{
@@ -152,17 +158,31 @@ button.item-btn-remove:hover{
     display: table-cell;
     width:90%;
     font-size: 22px;
-    height: 39px;
+    height: 35px;
     border: none;
 }
 
 .new-task-btn{
-    color: #fff;
     display: table-cell;
     border: none;
     float:right;
-    height:39px;
-    right: 0px;
+    height:35px;
     width: 10%;
-    background-color: #272e34;
+    background-color: transparent;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:  transform .8s ease-in-out;
+}
+
+#glyphicon-spin:hover{
+    color:#00637a;
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    
+}
+
+#glyphicon-spin{
+    font-size: 2rem;
+    color: #8ee4d6;
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition:  transform .8s ease-in-out;
 }
