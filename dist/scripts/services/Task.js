@@ -10,7 +10,7 @@
         }
         
         var addTask = function(task){
-            task.createdAt = (new Date()).getDate();
+            task.createdAt = firebase.database.ServerValue.TIMESTAMP;
             task.completed = false;
             return tasks.$add(task);
             

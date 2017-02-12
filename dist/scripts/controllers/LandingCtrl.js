@@ -3,6 +3,9 @@
         $scope.newTask = {};
         $scope.tasks = Task.all;
         
+        
+        
+        
         $scope.addTask = function(){
             console.log("code ran")
             Task.add($scope.newTask);
