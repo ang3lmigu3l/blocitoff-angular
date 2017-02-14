@@ -11,7 +11,12 @@
             controller: 'LandingCtrl as landing',
             templateUrl: 'templates/landing.html'
         });
-        
+        $stateProvider
+            .state('history',{
+            url:'/history',
+            controller: 'HistoryCtrl as history',
+            templateUrl: 'templates/history.html'
+        })
     };
     angular
         .module('blocItOff', ['ui.router','ui.bootstrap', 'firebase', 'ngAnimate'])

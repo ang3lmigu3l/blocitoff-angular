@@ -1,0 +1,22 @@
+<div id="active-tasks" class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+    <div id="tasks-header">
+    
+        <div class="header-title"> 
+            <a ui-sref='history'><span class='glyphicon glyphicon-time left-icon'></span></a>
+            Current Tasks
+        <a ui-sref='landing'><span class='glyphicon glyphicon-check right-icon'></span></a>
+        </div>
+    </div>
+    <div id="tasks-list">
+    <li class="task-item" ng-repeat="task in completedTasks ">
+        <span class="task-title">{{task.title}}</span>
+        <span class="bg-text-comp">Completed</span>
+    </li>
+        <li class="task-item" ng-repeat="task in expiredTasks ">
+        <span class="task-title">{{task.title}}</span>
+            <span class="bg-text-ex"> Expired</span>
+
+    </li>
+
+</div>
+</div>

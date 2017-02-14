@@ -3,8 +3,16 @@
         $scope.newTask = {};
         $scope.tasks = Task.all;
         
-        
-        
+         $scope.hasItExpired = function(task){
+             console.log("test");
+            var currentTime = new Date().getTime();
+            var taskCreated = task.createdAt;
+             console.log(taskCreated);
+             if ((currentTime - taskCreated ) >= 604800000) {
+                Task.expiredTask(task);
+                
+            }
+        }
         
         $scope.addTask = function(){
             console.log("code ran")
@@ -17,7 +25,7 @@
         }
         
         $scope.markComplete = function(task){
-            Task.completed(task);
+            Task.markCompleted(task);
         }
         
     }
