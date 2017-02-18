@@ -10,8 +10,17 @@
     <div id="tasks-list">
         <div class="input-grp">
             <input type="text" class="new-task-input" maxlength="30" class="new-msg" ng-model="newTask.title" placeholder="Add new task..">
+<!--
+            <select name="singleSelect" ng-model="data.singleSelect">
+                <option value="">Prior.</option>
+                <option value="1">Low</option>
+                <option value="2">Mid</option>
+                <option value="3">High</option>
+            </select>
+-->
             <button class="new-task-btn" ng-click="addTask(newTask.title)" type="button"><span id="glyphicon-spin" class="glyphicon glyphicon-plus-sign"></span></button>
         </div>
+        
     <li class="task-item" ng-hide="task.completed || task.expired" ng-repeat="task in tasks | orderBy: 'createdAt':true" ng-init="hasItExpired(task)">
         <span class="task-title">{{task.title}}  </span>
         <span class="task-time">{{task.createdAt | date :'MMM d, y'}}

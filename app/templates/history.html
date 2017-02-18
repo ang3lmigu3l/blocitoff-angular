@@ -8,11 +8,11 @@
         </div>
     </div>
     <div id="tasks-list">
-    <li class="task-item" ng-repeat="task in completedTasks ">
+    <li class="task-item priority-1" ng-repeat="task in completedTasks ">
         <span class="task-title">{{task.title}}</span>
         <span class="bg-text-comp">Completed</span>
     </li>
-        <li class="task-item" ng-repeat="task in expiredTasks ">
+        <li class="task-item priority-2" ng-repeat="task in expiredTasks ">
         <span class="task-title">{{task.title}}</span>
             <span class="bg-text-ex"> Expired</span>
 

@@ -2,6 +2,7 @@
     outline: none;
 }
 body {
+    min-width: 450px;
     background: url('../assets/images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     background-color:black;
@@ -73,6 +74,17 @@ body {
 
     
 }
+
+.priority-1{
+    border-left: 10px solid #53c5c8;
+}
+.priority-2{
+    border-left: 10px solid #9fb691;
+}
+.priority-2{
+    border-left: 10px solid #136982;
+}
+
 
 .task-item:hover{
     background-color: #ededed;

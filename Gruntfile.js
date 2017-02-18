@@ -23,7 +23,11 @@ module.exports = function(grunt) {
                     'copy'
                 ],
                 options: {
-                    spawn: false
+                    spawn: false,
+                        port: 9000,
+    hostname: '0.0.0.0',
+    base: 'public',
+    livereload: 35729,
                 }
             }
         },
